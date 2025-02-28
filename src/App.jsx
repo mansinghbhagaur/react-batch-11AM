@@ -1,31 +1,29 @@
 import React, { Component } from "react";
-import { Home } from "./Home";
 import About from "./About";
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { count: 0 };
-  }
-  increment = () => {
-    this.setState({ count: this.state.count + 1 });
+import ClassCom01 from "./life-cycle-method/ClassCom01";
+
+class Counter extends Component {
+  constructor() {
+    super();// call the parent class constructor
+    this.state = {
+      count: 0,
+    }
   }
   render() {
     return (
       <>
-        <h1>hello world</h1>
-        <h1>{this.state.count}</h1>
-        <button onClick={this.increment}>click</button>
-        <Home title="posts" id={7} name='man singh' />
-        <Home title="posts" id={8} name='man ' />
-        <Home title="posts" id={9} name='ram ' />
-        <About name="about page information" />
+        {/* <h1>Counter App</h1>
+        <h1>Counter: {this.state.count}</h1>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>Click</button>
+        <About title="About page props" countTitle="About" />
+        <About title="Contact Us page props" countTitle="contact" /> */}
+        <ClassCom01 />
       </>
     )
   }
 }
 
-export default App;
-
+export default Counter;
 
 // import { useState } from "react";
 // function App() {
