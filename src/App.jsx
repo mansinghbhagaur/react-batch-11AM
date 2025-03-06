@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import About from "./About";
 import ClassCom01 from "./life-cycle-method/ClassCom01";
-
+import FunUseState from "./functionComponent/FunUseState";
+import UseEffects from "./functionComponent/UseEffects";
 class Counter extends Component {
   constructor() {
     super();// call the parent class constructor
@@ -17,7 +18,9 @@ class Counter extends Component {
         <button onClick={() => this.setState({ count: this.state.count + 1 })}>Click</button>
         <About title="About page props" countTitle="About" />
         <About title="Contact Us page props" countTitle="contact" /> */}
-        <ClassCom01 />
+        {/* <ClassCom01 /> */}
+        {/* <FunUseState /> */}
+        <UseEffects />
       </>
     )
   }
