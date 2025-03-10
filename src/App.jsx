@@ -53,10 +53,12 @@
 
 import { useReducer } from "react";
 import reducer from "./reducer/reducer";
+import About from "./About";
+import Home from "./Home";
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, { count: 0 });
-  console.log(state)
+  // console.log(state)
   return (
     <div>
       <h1>App Component</h1>
@@ -64,7 +66,10 @@ const App = () => {
       <button onClick={() => dispatch({ type: 'ADD_ITEM' })}>Add Item</button>
       <button onClick={() => dispatch({ type: 'SUB_ITEM' })}>Sub Item</button>
       <button onClick={() => dispatch({ type: 'RESET_ITEM' })}>RESET Item</button>
+      <About />
+      <Home />
     </div>
+
   )
 }
 

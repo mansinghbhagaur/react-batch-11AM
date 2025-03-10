@@ -1,18 +1,14 @@
-import React from "react";
+import React from 'react'
+import { Store } from './context/Store'
+import { useContext } from 'react';
 
-export class Home extends React.Component {
-      constructor(props) {
-            super(props);
-      }
-      render() {
-            const { title, name, id } = this.props;
-            return (
-                  <>
-                        <h1>home page</h1>
-                        <h1>{title}</h1>
-                        <h1>{name}</h1>
-                        <h1>{id}</h1>
-                  </>
-            )
-      }
+const Home = () => {
+      const { data } = useContext(Store);
+      return (
+            <div>
+                  <h1>{data.name}</h1>
+            </div>
+      )
 }
+
+export default Home
